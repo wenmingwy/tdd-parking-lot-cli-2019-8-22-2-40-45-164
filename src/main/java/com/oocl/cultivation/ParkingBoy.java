@@ -28,6 +28,7 @@ public class ParkingBoy {
     		this.lastErrorMessage = "Please provide your parking ticket.";
     		return null;
     	}
+    	
 //    	凭票进行提车
     	Car car = parkingLot.getCarByTicket(ticket);
 //    	车票无法识别的情况

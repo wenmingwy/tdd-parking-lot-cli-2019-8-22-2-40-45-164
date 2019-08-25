@@ -25,7 +25,9 @@ public class ParkingLot {
 	
 	public int getCapacity() {
 		return capacity;
-	}
+	}  
+	
+	
 //    通过ticket获得car，则去除该ticket
 	public Car getCarByTicket(ParkingTicket parkingTicket) {
 		return cars.remove(parkingTicket);
