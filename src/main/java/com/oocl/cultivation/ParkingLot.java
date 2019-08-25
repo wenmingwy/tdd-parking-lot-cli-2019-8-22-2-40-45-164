@@ -16,6 +16,23 @@ public class ParkingLot {
     }
 
     public int getAvailableParkingPosition() {
-        return cars.size() - capacity;
+        return capacity - cars.size();
     }
+
+	public Map<ParkingTicket, Car> getCars() {
+		return cars;
+	}
+	
+	public int getCapacity() {
+		return capacity;
+	}
+//    通过ticket获得car，则去除该ticket
+	public Car getCarByTicket(ParkingTicket parkingTicket) {
+		return cars.remove(parkingTicket);
+	}
+//  通过停车获取ticket，则添加该ticket
+	public void parkCar(ParkingTicket parkingTicket, Car car) {		
+		cars.put(parkingTicket, car);
+	}
+    
 }
